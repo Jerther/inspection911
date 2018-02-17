@@ -1,0 +1,13 @@
+<odoo>
+
+  <record model="ir.ui.view" id="inspection911.device_list">
+    <field name="name">inspection911 device list</field>
+    <field name="model">device</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="uid"/>
+      </tree>
+    </field>
+  </record>
+
+</odoo>

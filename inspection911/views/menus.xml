@@ -1,0 +1,39 @@
+<odoo>
+  <menuitem id="inspection911_menu" name="Inspection 911" />
+  <menuitem id="inspection911_inspection" name="Inspection" parent="inspection911_menu" />
+  <menuitem id="inspection911_config" name="Configuration" parent="inspection911_menu" />
+
+  <!-- Inspection -->
+  <record model="ir.actions.act_window" id="inspection911_action_inspections">
+    <field name="name">Inspections</field>
+    <field name="res_model">inspection</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="inspection911_inspections" name="Inspections" parent="inspection911_inspection" action="inspection911_action_inspections" />
+
+  <!-- Configuration -->
+  <record model="ir.actions.act_window" id="inspection911_action_fire_stations">
+    <field name="name">Fire Stations</field>
+    <field name="res_model">fire_station</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="inspection911_fire_stations" name="Fire Stations" parent="inspection911_config" action="inspection911_action_fire_stations" />
+
+  <record model="ir.actions.act_window" id="inspection911_action_firemen">
+    <field name="name">Firemen</field>
+    <field name="res_model">fireman</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="inspection911_firemen" name="Firemen" parent="inspection911_config" action="inspection911_action_firemen" />
+
+  <record model="ir.actions.act_window" id="inspection911_action_devices">
+    <field name="name">Devices</field>
+    <field name="res_model">device</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="inspection911_devices" name="Devices" parent="inspection911_config" action="inspection911_action_devices" />
+</odoo>

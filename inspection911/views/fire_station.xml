@@ -1,0 +1,14 @@
+<odoo>
+
+  <record model="ir.ui.view" id="inspection911.fire_station_list">
+    <field name="name">inspection911 fire station list</field>
+    <field name="model">fire_station</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="fireman_ids"/>
+      </tree>
+    </field>
+  </record>
+
+</odoo>

@@ -1,6 +1,7 @@
 from odoo import fields, models
 
 
-class DeviceCategory(models.Model):
+class DeviceType(models.Model):
+    _name = 'device_type'
     name = fields.Char(required=True)
-    device_ids = fields.One2many('device', 'category_id', string="Devices")
+    device_ids = fields.One2many('device', 'type_id', string="Devices")

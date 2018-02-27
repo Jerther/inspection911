@@ -25,9 +25,10 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/menus.xml',
+        'views/brand.xml',
         'views/device.xml',
         'views/fire_station.xml',
-        'views/fireman.xml',
+        'views/res_users.xml',
         'views/inspection.xml',
     ],
 }

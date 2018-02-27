@@ -1,14 +1,13 @@
 <odoo>
 
   <record model="ir.ui.view" id="inspection911.fireman_list">
-    <field name="name">inspection911 fireman list</field>
-    <field name="model">fireman</field>
+    <field name="name">inspection911 users list</field>
+    <field name="model">res.users</field>
+    <field name="inherit_id" ref="base.view_users_tree"/>
     <field name="arch" type="xml">
-      <tree>
-        <field name="first_name"/>
-        <field name="last_name"/>
-        <field name="fire_station_ids"/>
-      </tree>
+      <field name="name" position="after">
+        <field name="number"/>
+      </field>
     </field>
   </record>
 

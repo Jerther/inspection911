@@ -8,9 +8,8 @@
         <field name="date"/>
         <field name="device_id"/>
         <field name="fire_station_id"/>
-        <field name="fireman_id"/>
+        <field name="user_id"/>
         <field name="complies"/>
-        <field name="comment"/>
       </tree>
     </field>
   </record>

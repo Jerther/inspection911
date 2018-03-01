@@ -1,0 +1,18 @@
+<odoo>
+
+  <record model="ir.ui.view" id="inspection911.location_form">
+    <field name="name">inspection911 location form</field>
+    <field name="model">location</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="device_ids"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+</odoo>

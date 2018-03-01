@@ -5,9 +5,28 @@
     <field name="model">device</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="uid"/>
+        <field name="name"/>
         <field name="make_id"/>
       </tree>
+    </field>
+  </record>
+
+  <record model="ir.ui.view" id="inspection911.device_form">
+    <field name="name">inspection911 device form</field>
+    <field name="model">device</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="description"/>
+            <field name="type_id"/>
+            <field name="brand_id"/>
+            <field name="make_id" domain="[('brand_id', '=', brand_id)]"/>
+            <field name="location_ids"/>
+          </group>
+        </sheet>
+      </form>
     </field>
   </record>
 

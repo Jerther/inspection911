@@ -1,18 +1,16 @@
 <odoo>
   <menuitem id="inspection911_menu" name="Inspection 911" web_icon="inspection911,static/description/icon.png" />
-  <menuitem id="inspection911_inspection" name="Inspection" parent="inspection911_menu" />
-  <menuitem id="inspection911_config" name="Configuration" parent="inspection911_menu" />
 
   <!-- Inspection -->
+  <menuitem id="inspection911_inspection" name="Inspection" parent="inspection911_menu" action="inspection911_action_inspections" />
   <record model="ir.actions.act_window" id="inspection911_action_inspections">
     <field name="name">Inspections</field>
     <field name="res_model">inspection</field>
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="inspection911_inspections" name="Inspections" parent="inspection911_inspection" action="inspection911_action_inspections" />
-
   <!-- Configuration -->
+  <menuitem id="inspection911_config" name="Configuration" parent="inspection911_menu" groups="base.group_erp_manager" />
   <record model="ir.actions.act_window" id="inspection911_action_fire_stations">
     <field name="name">Fire Stations</field>
     <field name="res_model">fire_station</field>

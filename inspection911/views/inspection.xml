@@ -20,12 +20,17 @@
     <field name="arch" type="xml">
       <form>
         <sheet>
-          <group col="4">
-            <field name="fire_station_id"/>
-            <field name="date" attrs="{'readonly': True}"/>
-            <field name="device_id"/>
-            <field name="user_id" attrs="{'readonly': True}"/>
-            <field name="complies"/>
+          <group>
+            <group>
+              <field name="fire_station_id"/>
+              <field name="location_id"/>
+              <field name="device_id"/>
+              <field name="complies"/>
+            </group>
+            <group>
+              <field name="date" groups="base.group_erp_manager"/>
+              <field name="user_id" groups="base.group_erp_manager"/>
+            </group>
           </group>
         </sheet>
       </form>

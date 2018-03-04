@@ -1,2 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_inspection911_inspection911,inspection911.inspection911,model_inspection911_inspection911,,1,0,0,0
+access_inspection911_inspection,access_inspection911_inspection,model_inspection,inspection911.group_fireman,1,0,1,0
+access_inspection911_device,access_inspection911_device,model_device,inspection911.group_fireman,1,0,0,0
+access_inspection911_brand,access_inspection911_brand,model_brand,inspection911.group_fireman,1,0,0,0
+access_inspection911_make,access_inspection911_make,model_make,inspection911.group_fireman,1,0,0,0
+access_inspection911_fire_station,access_inspection911_fire_station,model_fire_station,inspection911.group_fireman,1,0,0,0
+access_inspection911_location,access_inspection911_location,model_location,inspection911.group_fireman,1,0,0,0

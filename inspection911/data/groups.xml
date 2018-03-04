@@ -1,0 +1,8 @@
+<odoo>
+
+  <record id="inspection911.group_fireman" model="res.groups">
+   <field name="name">Fireman</field>
+   <field name="users" eval="[(4, ref('base.user_root'))]"/>
+  </record>
+
+</odoo>

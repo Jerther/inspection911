@@ -1,0 +1,285 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* inspection911
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-04 22:24+0000\n"
+"PO-Revision-Date: 2018-03-04 22:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_device_brand_id
+#: model:ir.model.fields,field_description:inspection911.field_make_brand_id
+msgid "Brand"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.actions.act_window,name:inspection911.inspection911_action_brands
+#: model:ir.ui.menu,name:inspection911.inspection911_brands
+msgid "Brands"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_inspection_comment
+msgid "Comment"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_inspection_complies
+msgid "Complies"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.ui.menu,name:inspection911.inspection911_config
+msgid "Configuration"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_brand_create_uid
+#: model:ir.model.fields,field_description:inspection911.field_device_create_uid
+#: model:ir.model.fields,field_description:inspection911.field_device_type_create_uid
+#: model:ir.model.fields,field_description:inspection911.field_fire_station_create_uid
+#: model:ir.model.fields,field_description:inspection911.field_inspection_create_uid
+#: model:ir.model.fields,field_description:inspection911.field_location_create_uid
+#: model:ir.model.fields,field_description:inspection911.field_make_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_brand_create_date
+#: model:ir.model.fields,field_description:inspection911.field_device_create_date
+#: model:ir.model.fields,field_description:inspection911.field_device_type_create_date
+#: model:ir.model.fields,field_description:inspection911.field_fire_station_create_date
+#: model:ir.model.fields,field_description:inspection911.field_inspection_create_date
+#: model:ir.model.fields,field_description:inspection911.field_location_create_date
+#: model:ir.model.fields,field_description:inspection911.field_make_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_inspection_date
+msgid "Date"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_device_description
+msgid "Description"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_inspection_device_id
+msgid "Device"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.actions.act_window,name:inspection911.inspection911_action_device_types
+#: model:ir.ui.menu,name:inspection911.inspection911_device_types
+msgid "Device Types"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.actions.act_window,name:inspection911.inspection911_action_devices
+#: model:ir.model.fields,field_description:inspection911.field_device_type_device_ids
+#: model:ir.model.fields,field_description:inspection911.field_location_device_ids
+#: model:ir.ui.menu,name:inspection911.inspection911_devices
+msgid "Devices"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_brand_display_name
+#: model:ir.model.fields,field_description:inspection911.field_device_display_name
+#: model:ir.model.fields,field_description:inspection911.field_device_type_display_name
+#: model:ir.model.fields,field_description:inspection911.field_fire_station_display_name
+#: model:ir.model.fields,field_description:inspection911.field_inspection_display_name
+#: model:ir.model.fields,field_description:inspection911.field_location_display_name
+#: model:ir.model.fields,field_description:inspection911.field_make_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_inspection_fire_station_id
+#: model:ir.model.fields,field_description:inspection911.field_location_fire_station_id
+msgid "Fire Station"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.actions.act_window,name:inspection911.inspection911_action_fire_stations
+#: model:ir.model.fields,field_description:inspection911.field_res_users_fire_station_ids
+#: model:ir.ui.menu,name:inspection911.inspection911_fire_stations
+msgid "Fire Stations"
+msgstr ""
+
+#. module: inspection911
+#: model:res.groups,name:inspection911.group_fireman
+msgid "Fireman"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_brand_id
+#: model:ir.model.fields,field_description:inspection911.field_device_id
+#: model:ir.model.fields,field_description:inspection911.field_device_type_id_2604
+#: model:ir.model.fields,field_description:inspection911.field_fire_station_id
+#: model:ir.model.fields,field_description:inspection911.field_inspection_id
+#: model:ir.model.fields,field_description:inspection911.field_location_id
+#: model:ir.model.fields,field_description:inspection911.field_make_id
+msgid "ID"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.ui.menu,name:inspection911.inspection911_inspection
+msgid "Inspection"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.ui.menu,name:inspection911.inspection911_menu
+msgid "Inspection 911"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.actions.act_window,name:inspection911.inspection911_action_inspections
+msgid "Inspections"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_brand___last_update
+#: model:ir.model.fields,field_description:inspection911.field_device___last_update
+#: model:ir.model.fields,field_description:inspection911.field_device_type___last_update
+#: model:ir.model.fields,field_description:inspection911.field_fire_station___last_update
+#: model:ir.model.fields,field_description:inspection911.field_inspection___last_update
+#: model:ir.model.fields,field_description:inspection911.field_location___last_update
+#: model:ir.model.fields,field_description:inspection911.field_make___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_brand_write_uid
+#: model:ir.model.fields,field_description:inspection911.field_device_type_write_uid
+#: model:ir.model.fields,field_description:inspection911.field_device_write_uid
+#: model:ir.model.fields,field_description:inspection911.field_fire_station_write_uid
+#: model:ir.model.fields,field_description:inspection911.field_inspection_write_uid
+#: model:ir.model.fields,field_description:inspection911.field_location_write_uid
+#: model:ir.model.fields,field_description:inspection911.field_make_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_brand_write_date
+#: model:ir.model.fields,field_description:inspection911.field_device_type_write_date
+#: model:ir.model.fields,field_description:inspection911.field_device_write_date
+#: model:ir.model.fields,field_description:inspection911.field_fire_station_write_date
+#: model:ir.model.fields,field_description:inspection911.field_inspection_write_date
+#: model:ir.model.fields,field_description:inspection911.field_location_write_date
+#: model:ir.model.fields,field_description:inspection911.field_make_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,help:inspection911.field_res_users_number
+msgid "License number"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_inspection_location_id
+msgid "Location"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_device_location_ids
+#: model:ir.model.fields,field_description:inspection911.field_fire_station_location_ids
+msgid "Locations"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_device_make_id
+msgid "Make"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_brand_make_ids
+msgid "Makes"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_brand_name
+#: model:ir.model.fields,field_description:inspection911.field_device_name
+#: model:ir.model.fields,field_description:inspection911.field_device_type_name
+#: model:ir.model.fields,field_description:inspection911.field_fire_station_name
+#: model:ir.model.fields,field_description:inspection911.field_location_name
+#: model:ir.model.fields,field_description:inspection911.field_make_name
+msgid "Name"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_res_users_number
+msgid "Number"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_device_rec_name
+msgid "Rec Name"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_device_type_id
+msgid "Type"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_inspection_user_id
+msgid "User"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model,name:inspection911.model_res_users
+#: model:ir.model.fields,field_description:inspection911.field_fire_station_user_ids
+msgid "Users"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model,name:inspection911.model_brand
+msgid "brand"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model,name:inspection911.model_device
+msgid "device"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model,name:inspection911.model_device_type
+msgid "device_type"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model,name:inspection911.model_fire_station
+msgid "fire_station"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model,name:inspection911.model_fireman
+msgid "fireman"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model,name:inspection911.model_inspection
+msgid "inspection"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model,name:inspection911.model_location
+msgid "location"
+msgstr ""
+
+#. module: inspection911
+#: model:ir.model,name:inspection911.model_make
+msgid "make"
+msgstr ""
+

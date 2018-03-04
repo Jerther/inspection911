@@ -14,4 +14,22 @@
     </field>
   </record>
 
+  <record model="ir.ui.view" id="inspection911.inspection_form">
+    <field name="name">inspection911 inspection form</field>
+    <field name="model">inspection</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group col="4">
+            <field name="fire_station_id"/>
+            <field name="date" attrs="{'readonly': True}"/>
+            <field name="device_id"/>
+            <field name="user_id" attrs="{'readonly': True}"/>
+            <field name="complies"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
 </odoo>

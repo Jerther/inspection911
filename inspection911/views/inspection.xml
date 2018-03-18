@@ -40,4 +40,14 @@
     </field>
   </record>
 
+  <record model="ir.ui.view" id="inspection911.inspection_search">
+    <field name="name">inspection911 inspection search</field>
+    <field name="model">inspection</field>
+    <field name="arch" type="xml">
+      <search>
+         <filter string="Today" name="today" domain="[('date', '&gt;=', datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')), ('date', '&lt;=', datetime.datetime.now().strftime('%Y-%m-%d 23:59:59'))]"/>
+      </search>
+    </field>
+  </record>
+
 </odoo>

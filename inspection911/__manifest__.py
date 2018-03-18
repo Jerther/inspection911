@@ -1,5 +1,5 @@
 {
-    'name': "inspection911",
+    'name': "Inspection 911",
 
     'summary': """
         Equipment inspections for fire stations.""",

@@ -6,16 +6,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-04 22:24+0000\n"
-"PO-Revision-Date: 2018-03-04 17:32-0500\n"
+"POT-Creation-Date: 2018-03-18 16:55+0000\n"
+"PO-Revision-Date: 2018-03-18 12:57-0400\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: fr\n"
 "X-Generator: Poedit 2.0.6\n"
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_device_active
+#: model:ir.model.fields,field_description:inspection911.field_location_active
+msgid "Active"
+msgstr "Actif"
 
 #. module: inspection911
 #: model:ir.model.fields,field_description:inspection911.field_device_brand_id
@@ -151,6 +157,13 @@ msgid "Inspections"
 msgstr "Inspections"
 
 #. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_device_last_inspection_date
+#, fuzzy
+#| msgid "Inspection"
+msgid "Last Inspection Date"
+msgstr "Inspection"
+
+#. module: inspection911
 #: model:ir.model.fields,field_description:inspection911.field_brand___last_update
 #: model:ir.model.fields,field_description:inspection911.field_device___last_update
 #: model:ir.model.fields,field_description:inspection911.field_device_type___last_update
@@ -228,6 +241,18 @@ msgstr "Matricule"
 #: model:ir.model.fields,field_description:inspection911.field_device_rec_name
 msgid "Rec Name"
 msgstr ""
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_device_serial_number
+#, fuzzy
+#| msgid "Number"
+msgid "Serial Number"
+msgstr "Matricule"
+
+#. module: inspection911
+#: model:ir.ui.view,arch_db:inspection911.inspection_search
+msgid "Today"
+msgstr "Aujourd'hui"
 
 #. module: inspection911
 #: model:ir.model.fields,field_description:inspection911.field_device_type_id

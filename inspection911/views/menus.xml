@@ -6,6 +6,7 @@
     <field name="name">Inspections</field>
     <field name="res_model">inspection</field>
     <field name="view_mode">tree,form</field>
+    <field name="context">{"search_default_today":1}</field>
   </record>
   <menuitem id="inspection911_inspection" name="Inspection" parent="inspection911_menu" action="inspection911_action_inspections" />
 

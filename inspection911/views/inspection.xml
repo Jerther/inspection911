@@ -32,6 +32,9 @@
               <field name="user_id" groups="base.group_erp_manager"/>
             </group>
           </group>
+          <group>
+            <field name="comment" />
+          </group>
         </sheet>
       </form>
     </field>

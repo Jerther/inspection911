@@ -17,13 +17,20 @@
     <field name="arch" type="xml">
       <form>
         <sheet>
+          <div class="oe_button_box" name="button_box">
+            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-check">
+              <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;active&quot;}"/>
+            </button>
+          </div>
           <group>
             <field name="name"/>
             <field name="description"/>
+            <field name="serial_number"/>
             <field name="type_id"/>
             <field name="brand_id"/>
             <field name="make_id" domain="[('brand_id', '=', brand_id)]"/>
             <field name="location_ids"/>
+            <field name="last_inspection_date"/>
           </group>
         </sheet>
       </form>

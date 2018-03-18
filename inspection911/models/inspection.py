@@ -8,7 +8,7 @@ class Inspection(models.Model):
     user_id = fields.Many2one('res.users', "User", required=True, ondelete='cascade', default=lambda self: self.env.user.id)
     device_id = fields.Many2one('device', "Device", required=True, ondelete='cascade')
     location_id = fields.Many2one('location', "Location", required=True, ondelete='cascade')
-    complies = fields.Boolean()
+    complies = fields.Boolean(default=True)
     comment = fields.Html()
     date = fields.Datetime(required=True, default=fields.Datetime.now())
 

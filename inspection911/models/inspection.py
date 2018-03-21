@@ -13,6 +13,12 @@ class Inspection(models.Model):
     date = fields.Datetime(required=True, default=fields.Datetime.now())
     location_id = fields.Many2one('location', "Location", required=True, ondelete='cascade')
 
+    def _default_device_type_id(self):
+        return request.session.device_type_id or \
+               self.env['device_type'].search([], limit=1)
+
+    device_type_id = fields.Many2one('device_type', "Device type", store=False, default=_default_device_type_id)
+
     def _fire_station_id_domain(self):
         ids = [s.id for s in self.env.user.fire_station_ids]
         return [('id', 'in', ids)]
@@ -42,6 +48,19 @@ class Inspection(models.Model):
     def onchange_location_id(self):
         request.session.location_id = self.location_id.id
         ids = [d.id for d in self.location_id.device_ids]
+        if self.device_type_id:
+            ids = [i for i in ids if i in [d.id for d in self.device_type_id.device_ids]]
+        return {
+            'domain': {'device_id': [('id', 'in', ids)]},
+            'value': {'device_id': False}
+        }
+
+    @api.onchange('device_type_id')
+    def onchange_device_type_id(self):
+        request.session.device_type_id = self.device_type_id.id
+        ids = [d.id for d in self.location_id.device_ids]
+        if self.device_type_id:
+            ids = [i for i in ids if i in [d.id for d in self.device_type_id.device_ids]]
         return {
             'domain': {'device_id': [('id', 'in', ids)]},
             'value': {'device_id': False}

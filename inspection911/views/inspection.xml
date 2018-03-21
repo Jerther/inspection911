@@ -24,6 +24,7 @@
             <group>
               <field name="fire_station_id"/>
               <field name="location_id"/>
+              <field name="device_type_id"/>
               <field name="device_id"/>
               <field name="complies"/>
             </group>

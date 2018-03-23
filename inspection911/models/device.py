@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class Device(models.Model):
@@ -12,15 +12,19 @@ class Device(models.Model):
     type_id = fields.Many2one('device_type', string="Type", required=True, ondelete='cascade')
     brand_id = fields.Many2one('brand', "Brand")
     make_id = fields.Many2one('make', string="Make")
+    inspection_ids = fields.One2many('inspection', 'device_id', string="Inspections")
 
+    @api.depends('inspection_ids.date')
     def _compute_last_inspection_date(self):
+        inspections = self.env['inspection']
         for record in self:
-            record.last_inspection_date = fields.Datetime.now()
+            last_inspections = inspections.search_read([('device_id', '=', record.id)], limit=1, fields=['date'])
+            record.last_inspection_date = last_inspections and last_inspections[0]['date']
 
-    last_inspection_date = fields.Datetime(compute=_compute_last_inspection_date)
+    last_inspection_date = fields.Datetime(compute=_compute_last_inspection_date, store=True)
 
     def _compute_rec_name(self):
         for record in self:
             record.rec_name = "%s - %s - %s - %s" % (record.name, record.brand_id.name, record.make_id.name, record.description or '')
 
-    rec_name = fields.Char(compute=_compute_rec_name)
+    rec_name = fields.Char("Name", compute=_compute_rec_name)

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-18 16:55+0000\n"
-"PO-Revision-Date: 2018-03-18 12:57-0400\n"
+"POT-Creation-Date: 2018-03-23 01:16+0000\n"
+"PO-Revision-Date: 2018-03-22 21:19-0400\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -91,6 +91,11 @@ msgstr "Appareil"
 #: model:ir.actions.act_window,name:inspection911.inspection911_action_device_types
 #: model:ir.ui.menu,name:inspection911.inspection911_device_types
 msgid "Device Types"
+msgstr "Types d'appareil"
+
+#. module: inspection911
+#: model:ir.model.fields,field_description:inspection911.field_inspection_device_type_id
+msgid "Device type"
 msgstr "Type d'appareil"
 
 #. module: inspection911
@@ -153,15 +158,14 @@ msgstr "Inspection 911"
 
 #. module: inspection911
 #: model:ir.actions.act_window,name:inspection911.inspection911_action_inspections
+#: model:ir.model.fields,field_description:inspection911.field_device_inspection_ids
 msgid "Inspections"
 msgstr "Inspections"
 
 #. module: inspection911
 #: model:ir.model.fields,field_description:inspection911.field_device_last_inspection_date
-#, fuzzy
-#| msgid "Inspection"
 msgid "Last Inspection Date"
-msgstr "Inspection"
+msgstr "Dernière inspection"
 
 #. module: inspection911
 #: model:ir.model.fields,field_description:inspection911.field_brand___last_update
@@ -225,6 +229,7 @@ msgstr "Modèles"
 #. module: inspection911
 #: model:ir.model.fields,field_description:inspection911.field_brand_name
 #: model:ir.model.fields,field_description:inspection911.field_device_name
+#: model:ir.model.fields,field_description:inspection911.field_device_rec_name
 #: model:ir.model.fields,field_description:inspection911.field_device_type_name
 #: model:ir.model.fields,field_description:inspection911.field_fire_station_name
 #: model:ir.model.fields,field_description:inspection911.field_location_name
@@ -236,11 +241,6 @@ msgstr "Nom"
 #: model:ir.model.fields,field_description:inspection911.field_res_users_number
 msgid "Number"
 msgstr "Matricule"
-
-#. module: inspection911
-#: model:ir.model.fields,field_description:inspection911.field_device_rec_name
-msgid "Rec Name"
-msgstr ""
 
 #. module: inspection911
 #: model:ir.model.fields,field_description:inspection911.field_device_serial_number
@@ -283,12 +283,12 @@ msgstr "appareil"
 #. module: inspection911
 #: model:ir.model,name:inspection911.model_device_type
 msgid "device_type"
-msgstr ""
+msgstr "type_appareil"
 
 #. module: inspection911
 #: model:ir.model,name:inspection911.model_fire_station
 msgid "fire_station"
-msgstr ""
+msgstr "caserne"
 
 #. module: inspection911
 #: model:ir.model,name:inspection911.model_fireman

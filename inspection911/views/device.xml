@@ -5,8 +5,8 @@
     <field name="model">device</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="name"/>
-        <field name="make_id"/>
+        <field name="rec_name"/>
+        <field name="last_inspection_date"/>
       </tree>
     </field>
   </record>

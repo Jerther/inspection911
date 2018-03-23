@@ -18,7 +18,7 @@ class Device(models.Model):
     def _compute_last_inspection_date(self):
         inspections = self.env['inspection']
         for record in self:
-            last_inspections = inspections.search_read([('device_id', '=', record.id)], limit=1, fields=['date'])
+            last_inspections = inspections.search_read([('device_id', '=', record.id)], order='date desc', limit=1, fields=['date'])
             record.last_inspection_date = last_inspections and last_inspections[0]['date']
 
     last_inspection_date = fields.Datetime(compute=_compute_last_inspection_date, store=True)

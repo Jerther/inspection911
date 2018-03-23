@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-23 01:16+0000\n"
-"PO-Revision-Date: 2018-03-22 21:19-0400\n"
+"POT-Creation-Date: 2018-03-23 22:44+0000\n"
+"PO-Revision-Date: 2018-03-23 18:45-0400\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -105,6 +105,12 @@ msgstr "Type d'appareil"
 #: model:ir.ui.menu,name:inspection911.inspection911_devices
 msgid "Devices"
 msgstr "Appareils"
+
+#. module: inspection911
+#: code:addons/inspection911/models/inspection.py:52
+#, python-format
+msgid "Devices can be inspected only once a day."
+msgstr "Les appareils ne peuvent être inspectés qu'une fois par jour."
 
 #. module: inspection911
 #: model:ir.model.fields,field_description:inspection911.field_brand_display_name

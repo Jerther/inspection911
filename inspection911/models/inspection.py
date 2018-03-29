@@ -4,22 +4,22 @@ from odoo.http import request
 
 
 class Inspection(models.Model):
-    _name = 'inspection'
+    _name = 'inspection911.inspection'
     _rec_name = 'device_id'
 
     user_id = fields.Many2one('res.users', "User", required=True, ondelete='cascade', default=lambda self: self.env.user.id)
-    device_id = fields.Many2one('device', "Device", required=True, ondelete='cascade')
+    device_id = fields.Many2one('inspection911.device', "Device", required=True, ondelete='cascade')
     complies = fields.Boolean(default=True)
     comment = fields.Html()
     date = fields.Datetime(required=True, default=fields.Datetime.now())
-    location_id = fields.Many2one('location', "Location", required=True, ondelete='cascade')
+    location_id = fields.Many2one('inspection911.location', "Location", required=True, ondelete='cascade')
 
     def _default_device_type_id(self):
         return request and \
                request.session.device_type_id or \
-               self.env['device_type'].search([], limit=1)
+               self.env['inspection911.device_type'].search([], limit=1)
 
-    device_type_id = fields.Many2one('device_type', "Device type", store=False, default=_default_device_type_id)
+    device_type_id = fields.Many2one('inspection911.device_type', "Device type", store=False, default=_default_device_type_id)
 
     def _fire_station_id_domain(self):
         ids = [s.id for s in self.env.user.fire_station_ids]
@@ -32,9 +32,9 @@ class Inspection(models.Model):
                 return record.location_id.fire_station_id
             else:
                 record.fire_station_id = request.session.fire_station_id or \
-                       record.env['fire_station'].search(record._fire_station_id_domain(), limit=1)
+                       record.env['inspection911.fire_station'].search(record._fire_station_id_domain(), limit=1)
 
-    fire_station_id = fields.Many2one('fire_station', "Fire Station", domain=_fire_station_id_domain,
+    fire_station_id = fields.Many2one('inspection911.fire_station', "Fire Station", domain=_fire_station_id_domain,
                                       compute=_compute_fire_station_id, inverse=lambda __: None)
 
     @api.constrains('date', 'device_id')
@@ -48,7 +48,7 @@ class Inspection(models.Model):
             ('date', '<=', date_end),
             ('id', '!=', self.id)
         ]
-        if self.env['inspection'].search_count(domain):
+        if self.env['inspection911.inspection'].search_count(domain):
             raise ValidationError(_("Devices can be inspected only once a day."))
 
     @api.onchange('fire_station_id')
@@ -62,7 +62,7 @@ class Inspection(models.Model):
         if request.session.location_id and request.session.location_id in [l.id for l in self.fire_station_id.location_ids]:
             location_id = request.session.location_id
         else:
-            location_id = self.env['location'].search(location_domain, limit=1)
+            location_id = self.env['inspection911.location'].search(location_domain, limit=1)
         return {
             'domain': {'location_id': location_domain},
             'value': {

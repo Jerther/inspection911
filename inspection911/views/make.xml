@@ -2,7 +2,7 @@
 
   <record model="ir.ui.view" id="inspection911.make_form">
     <field name="name">inspection911 make form</field>
-    <field name="model">make</field>
+    <field name="model">inspection911.make</field>
     <field name="arch" type="xml">
       <form>
         <sheet>

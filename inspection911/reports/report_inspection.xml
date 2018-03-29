@@ -1,0 +1,57 @@
+<odoo>
+  <data noupdate="0">
+
+    <template id="report_inspections">
+      <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+          <t t-call="inspection911.report_inspections_document" t-lang="request.env.user.partner_id.lang"/>
+        </t>
+      </t>
+    </template>
+
+    <!-- Translatable template -->
+    <template id="report_inspections_document">
+      <t t-set="doc" t-value="doc.with_context({'lang':request.env.user.partner_id.lang})" />
+      <t t-call="web.external_layout">
+        <div class="page">
+          <div class="oe_structure"/>
+          <div class="row">
+            <div class="col-xs-6">
+              <strong t-if="doc.partner_shipping_id == doc.partner_invoice_id">Invoice and shipping address:</strong>
+              <strong t-if="doc.partner_shipping_id != doc.partner_invoice_id">Invoice address:</strong>
+              <div t-field="doc.partner_invoice_id" t-options="{&quot;no_marker&quot;: True}"/>
+            </div>
+            <table>
+              <tr t-foreach="o.project_ids" t-as="line">
+                <td><span t-field="line.id"/></td>
+
+                <td><span t-field="line.name"/></td>
+
+                <td><span t-field="line.user_id"/></td>
+
+                <td><span t-field="line.partner_id"/></td>
+
+                <td><span t-field="line.progress_rate"/></td>
+
+                <td><span t-field="line.state"/></td>
+              </tr>
+            </table>
+            <div class="oe_structure"/>
+          </div>
+        </div>
+      </t>
+    </template>
+
+    <report
+      id="inspections"
+      model="inspection911.inspection"
+      string="Inspections Report"
+      report_type="qweb-pdf"
+      name="inspection911.report_inspections"
+      file="inspection911.report_inspections"
+      attachment_use="False"
+      attachment="'Inspections ' + fields.Datetime.now() + '.pdf')"
+    />
+
+  </data>
+</odoo>

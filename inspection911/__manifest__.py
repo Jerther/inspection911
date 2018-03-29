@@ -5,7 +5,7 @@
         Equipment inspections for fire stations.""",
 
     'description': """
-        Periodical inspection of all equipments in a fire station.
+        Manage periodical inspection of equipments in a fire station.
     """,
 
     'author': "Jerther",
@@ -34,5 +34,6 @@
         'views/location.xml',
         'views/res_users.xml',
         'views/inspection.xml',
+        'reports/report_inspection.xml',
     ],
 }

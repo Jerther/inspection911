@@ -2,7 +2,7 @@
 
   <record model="ir.ui.view" id="inspection911.fire_station_list">
     <field name="name">inspection911 fire station list</field>
-    <field name="model">fire_station</field>
+    <field name="model">inspection911.fire_station</field>
     <field name="arch" type="xml">
       <tree>
         <field name="name"/>
@@ -14,7 +14,7 @@
 
   <record model="ir.ui.view" id="inspection911.fire_station_form">
     <field name="name">inspection911 fire station form</field>
-    <field name="model">fire_station</field>
+    <field name="model">inspection911.fire_station</field>
     <field name="arch" type="xml">
       <form>
         <sheet>

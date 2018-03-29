@@ -2,7 +2,7 @@
 
   <record model="ir.ui.view" id="inspection911.device_list">
     <field name="name">inspection911 device list</field>
-    <field name="model">device</field>
+    <field name="model">inspection911.device</field>
     <field name="arch" type="xml">
       <tree>
         <field name="rec_name"/>
@@ -13,7 +13,7 @@
 
   <record model="ir.ui.view" id="inspection911.device_form">
     <field name="name">inspection911 device form</field>
-    <field name="model">device</field>
+    <field name="model">inspection911.device</field>
     <field name="arch" type="xml">
       <form>
         <sheet>

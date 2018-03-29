@@ -4,7 +4,7 @@
   <!-- Inspection -->
   <record model="ir.actions.act_window" id="inspection911_action_inspections">
     <field name="name">Inspections</field>
-    <field name="res_model">inspection</field>
+    <field name="res_model">inspection911.inspection</field>
     <field name="view_mode">tree,form</field>
     <field name="context">{"search_default_today":1}</field>
   </record>
@@ -14,7 +14,7 @@
   <menuitem id="inspection911_config" name="Configuration" parent="inspection911_menu" groups="base.group_erp_manager" />
   <record model="ir.actions.act_window" id="inspection911_action_fire_stations">
     <field name="name">Fire Stations</field>
-    <field name="res_model">fire_station</field>
+    <field name="res_model">inspection911.fire_station</field>
     <field name="view_mode">tree,form</field>
   </record>
   <menuitem id="inspection911_fire_stations" name="Fire Stations" parent="inspection911_config" action="inspection911_action_fire_stations" />
@@ -22,7 +22,7 @@
 
   <record model="ir.actions.act_window" id="inspection911_action_devices">
     <field name="name">Devices</field>
-    <field name="res_model">device</field>
+    <field name="res_model">inspection911.device</field>
     <field name="view_mode">tree,form</field>
   </record>
   <menuitem id="inspection911_devices" name="Devices" parent="inspection911_config" action="inspection911_action_devices" />
@@ -30,14 +30,14 @@
 
   <record model="ir.actions.act_window" id="inspection911_action_brands">
     <field name="name">Brands</field>
-    <field name="res_model">brand</field>
+    <field name="res_model">inspection911.brand</field>
     <field name="view_mode">tree,form</field>
   </record>
   <menuitem id="inspection911_brands" name="Brands" parent="inspection911_config" action="inspection911_action_brands" />
 
   <record model="ir.actions.act_window" id="inspection911_action_device_types">
     <field name="name">Device Types</field>
-    <field name="res_model">device_type</field>
+    <field name="res_model">inspection911.device_type</field>
     <field name="view_mode">tree,form</field>
   </record>
   <menuitem id="inspection911_device_types" name="Device Types" parent="inspection911_config" action="inspection911_action_device_types" />

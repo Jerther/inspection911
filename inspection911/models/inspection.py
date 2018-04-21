@@ -11,7 +11,7 @@ class Inspection(models.Model):
     device_id = fields.Many2one('inspection911.device', "Device", required=True, ondelete='cascade')
     complies = fields.Boolean(default=True)
     comment = fields.Html()
-    date = fields.Datetime(required=True, default=fields.Datetime.now())
+    date = fields.Datetime(required=True, default=fields.Datetime.now)
     location_id = fields.Many2one('inspection911.location', "Location", required=True, ondelete='cascade')
 
     def _default_device_type_id(self):

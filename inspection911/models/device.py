@@ -25,6 +25,19 @@ class Device(models.Model):
 
     def _compute_rec_name(self):
         for record in self:
-            record.rec_name = "%s - %s - %s - %s" % (record.name, record.brand_id.name, record.make_id.name, record.description or '')
+            values = [record.name, record.brand_id.name, record.make_id.name, record.description]
+            values = [v for v in values if v]
+            record.rec_name = ' - '.join(values)
 
-    rec_name = fields.Char("Name", compute=_compute_rec_name)
+    def _search_rec_name(self, operator, value):
+        if operator == 'like':
+            operator = 'ilike'
+        domain = [
+            '|', ('name', operator, value),
+            '|', ('brand_id.name', operator, value),
+            '|', ('make_id.name', operator, value),
+            ('description', operator, value)
+        ]
+        return domain
+
+    rec_name = fields.Char("Name", compute=_compute_rec_name, search=_search_rec_name)

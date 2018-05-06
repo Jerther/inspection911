@@ -65,6 +65,7 @@
       <field name="print_report_name">'Inspections ' + time.strftime('%Y-%m-%d')</field>
       <field name="attachment_use" eval="False"/>
       <field name="usage">default</field>
+      <field name="paperformat_id" ref="inspection911.paperformat_inspection911"></field>
     </record>
 
 

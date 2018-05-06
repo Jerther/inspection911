@@ -24,6 +24,7 @@
     # always loaded
     'data': [
         'data/groups.xml',
+        'data/report_paperformat.xml',
         'security/ir.model.access.csv',
         'views/menus.xml',
         'views/make.xml',

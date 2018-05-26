@@ -14,12 +14,18 @@ class Inspection(models.Model):
     date = fields.Datetime(required=True, default=fields.Datetime.now)
     location_id = fields.Many2one('inspection911.location', "Location", required=True, ondelete='cascade')
 
-    def _default_device_type_id(self):
-        return request and \
-               request.session.device_type_id or \
-               self.env['inspection911.device_type'].search([], limit=1)
+    @api.depends('device_id')
+    def _compute_device_type_id(self):
+        for record in self:
+            if record.device_id:
+                record.device_type_id = record.device_id.type_id
+            else:
+                record.device_type_id = request and \
+                   request.session.device_type_id or \
+                   self.env['inspection911.device_type'].search([], limit=1)
 
-    device_type_id = fields.Many2one('inspection911.device_type', "Device type", store=False, default=_default_device_type_id)
+    device_type_id = fields.Many2one('inspection911.device_type', "Device type",
+                                     compute=_compute_device_type_id, inverse=lambda __: None)
 
     def _fire_station_id_domain(self):
         ids = [s.id for s in self.env.user.fire_station_ids]
@@ -29,7 +35,7 @@ class Inspection(models.Model):
     def _compute_fire_station_id(self):
         for record in self:
             if record.location_id:
-                return record.location_id.fire_station_id
+                record.fire_station_id = record.location_id.fire_station_id
             else:
                 record.fire_station_id = request.session.fire_station_id or \
                        record.env['inspection911.fire_station'].search(record._fire_station_id_domain(), limit=1)
